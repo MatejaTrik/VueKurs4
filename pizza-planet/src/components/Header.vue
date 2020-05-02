@@ -6,19 +6,19 @@
         </div>
         <nav>
             <ul>
-                <router-link :to="homeLink" tag="li">
+                <router-link :to="{name:'homeLink'}" tag="li">
                     <a>Home</a>
                 </router-link>
                 <span>~</span>
-                <router-link :to="menuLink" tag="li">
+                <router-link :to="{name:'menuLink'}" tag="li">
                     <a>Menu</a>
                 </router-link>
                 <span>~</span>
-                <router-link :to="contactLink" tag="li">
+                <router-link :to="{name:'contactLink'}" tag="li">
                     <a>Contact</a>
                 </router-link>
                 <span>~</span>
-                <router-link :to="aboutLink" tag="li">
+                <router-link :to="{name:'aboutLink'}" tag="li">
                     <a>About us</a>
                 </router-link>
                 <span>~</span>
@@ -30,14 +30,6 @@
 <script>
     export default {
         name: 'appHeader',
-        data() {
-            return{ 
-                homeLink: '/',
-                menuLink: '/menu',
-                contactLink: 'contact',
-                aboutLink: 'about'
-            }
-        }
     }
 </script>
 

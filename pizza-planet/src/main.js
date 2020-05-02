@@ -18,32 +18,32 @@ const routes = [
   {
     path: '/',
     component: Home,
-    name: 'Home'
+    name: 'homeLink'
   },
   {
     path: '/menu',
     component: Menu,
-    name: 'Menu'
+    name: 'menuLink'
   },
   {
     path: '/contact',
     component: Contact,
-    name: 'Contact'
+    name: 'contactLink'
   },
   {
     path: '/admin',
     component: Admin,
-    name: 'Admin'
+    name: 'adminLink'
   },
   {
     path: '/about',
     component: About,
     children: [
-      { path: '/history', component: History },
-      { path: '/delivery', component: Delivery },
-      { path: '/ordering-guide', component: OrderingGuide },
+      { path: '/history',name:'historyLink', component: History },
+      { path: '/delivery', name:'deliveryLink', component: Delivery },
+      { path: '/ordering-guide', name:'orderingGuideLink', component: OrderingGuide },
     ],
-    name: 'About'
+    name: 'aboutLink'
   },
   {
     path: '*',

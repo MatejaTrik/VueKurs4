@@ -19,7 +19,9 @@
                         <td>{{ option.size }}"</td>
                         <td>${{option.price}}</td>
                         <td>
+                            <div class="test">
                             <button type="button" class="btn_green" @click="addToBasket(item, option)">+</button>
+                            </div>
                         </td>
                     </tr>
                 </tbody>
@@ -167,5 +169,13 @@
 
     .basket {
         width: 35vw;
+        
+    }
+
+    .test {
+        border: solid 1px red;
+        text-align: left;
+        margin-right: 40px;
+        margin-left: 0%;
     }
 </style>
