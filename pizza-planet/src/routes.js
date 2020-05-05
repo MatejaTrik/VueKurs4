@@ -10,33 +10,38 @@ import OrderingGuide from './components/OrderingGuide'
 export const routes = [
     {
       path: '/',
-      component: Home,
-      name: 'homeLink'
+      name: 'homeLink',
+      components: {
+        default: Home, 
+        'ordering-guide':OrderingGuide,
+        'delivery':Delivery,
+        'history':History,
+      },
     },
     {
       path: '/menu',
+      name: 'menuLink',
       component: Menu,
-      name: 'menuLink'
     },
     {
       path: '/contact',
+      name: 'contactLink',
       component: Contact,
-      name: 'contactLink'
     },
     {
       path: '/admin',
+      name: 'adminLink',
       component: Admin,
-      name: 'adminLink'
     },
     {
       path: '/about',
       component: About,
+      name: 'aboutLink',
       children: [
         { path: '/history',name:'historyLink', component: History },
         { path: '/delivery', name:'deliveryLink', component: Delivery },
         { path: '/ordering-guide', name:'orderingGuideLink', component: OrderingGuide },
       ],
-      name: 'aboutLink'
     },
     {
       path: '*',

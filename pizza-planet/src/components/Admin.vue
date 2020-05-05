@@ -92,6 +92,7 @@ export default {
         margin: 10px 0;
         padding: 10px;
         border: solid 1px #f79e38;
+        text-align: center;
     }
 
     table {
