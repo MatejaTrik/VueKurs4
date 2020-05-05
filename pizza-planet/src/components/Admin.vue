@@ -95,7 +95,8 @@ export default {
     }
 
     table {
-        text-align: left;
+        text-align: center;
+        width: 35vw;
     }
 
     .order_number th {

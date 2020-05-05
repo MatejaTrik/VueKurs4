@@ -11,7 +11,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td>``
                             <small>~ {{item.description}} ~</small>
                         </td>
                     </tr>
@@ -39,7 +39,7 @@
                                 <span>{{ item.quantity }}</span>
                                 <button class="btn_green" @click="increaseQuantity(item)">&#43;</button>
                             </td>
-                            <td>{{ item.name }}  {{ item.price }}"</td>
+                            <td>{{ item.name }}  {{ item.size }}"</td>
                             <td>${{ item.price * item.quantity}}</td>
                         </tr>
                     </tbody>
@@ -63,7 +63,7 @@
             return {
                 basketText: 'Your basket is empty',
                 basket:[],
-                MenuItems: {
+                getMenuItems: {
                     1: {
                       'name': 'Margherita',
                       'description': 'A delicious tomato based pizza topped with mozzarella',
@@ -97,12 +97,8 @@
                         'price': 12.95
                       }]
                     }
-                }               
-            }
-        },
-        computed: {
-            getMenuItems() {
-                return getMenuItems = this.$store.state.menuItems;
+                }
+
             }
         },
         methods: {
@@ -177,8 +173,9 @@
     }
 
     .test {
+        border: solid 1px red;
         text-align: left;
-        margin-right: 250px;
+        margin-right: 40px;
         margin-left: 0%;
     }
 </style>

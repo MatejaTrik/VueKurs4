@@ -64,7 +64,7 @@
     }
 </script>
 
-<style>
+<style scoped>
 
     .form-group {
         margin: 10px 0;
@@ -84,7 +84,7 @@
         border: solid 1px #f79e38;
     }
 
-    .btn_green{
+    button{
         background-color: rgb(63, 145, 63);
         color: white;
         padding: 5px 15px;

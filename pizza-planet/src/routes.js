@@ -7,36 +7,26 @@ import History from './components/History'
 import Delivery from './components/Delivery'
 import OrderingGuide from './components/OrderingGuide'
 
-
 export const routes = [
     {
       path: '/',
-      name: 'homeLink',
-      components: {
-          default: Home,
-          'ordering-guide': OrderingGuide,
-          'delivery': Delivery,
-          'history': History
-      },
+      component: Home,
+      name: 'homeLink'
     },
     {
       path: '/menu',
-      name: 'menuLink',
-      components: Menu,
+      component: Menu,
+      name: 'menuLink'
     },
     {
       path: '/contact',
-      name: 'contactLink',
-      components: Contact,
+      component: Contact,
+      name: 'contactLink'
     },
     {
       path: '/admin',
-      name: 'adminLink',
-      components: Admin,
-      beforeEnter: (to, from, next) => {
-        alert('This area is for authorised user only. please continue to meny')
-        next(true)
-      }
+      component: Admin,
+      name: 'adminLink'
     },
     {
       path: '/about',
