@@ -14,9 +14,9 @@
                         <th>Remove from menu</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody v-for="item in getMenuItems" :key="item.id">
                     <tr>
-                        <td>Margarita</td>
+                        <td>{{ item.name }}</td>
                         <td>
                             <button type="button" class="btn_red">&times;</button>
                         </td>
@@ -25,7 +25,7 @@
             </table>
         </div>
         <div class="orders_wrapper">
-            <h3>Current orders(5)</h3>
+            <h3>Current orders({{ numberOfOrders }})</h3>
             <table>
                 <thead>
                     <tr>
@@ -66,6 +66,14 @@ export default {
         NewPizza,
         Login
     },
+    computed: {
+        getMenuItems() {
+            return this.$store.getters.getMenuItems
+        },
+        numberOfOrders() {
+            return this.$store.getters.numberOfOrders
+        }
+    },
     methods: {
         async signOut() {
             try{ 
@@ -93,11 +101,13 @@ export default {
         padding: 10px;
         border: solid 1px #f79e38;
         text-align: center;
+        height: 400px;
     }
 
     table {
         text-align: center;
         width: 35vw;
+        
     }
 
     .order_number th {
