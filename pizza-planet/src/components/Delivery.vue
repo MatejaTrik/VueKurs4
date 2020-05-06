@@ -1,15 +1,19 @@
 <template>
-    <div class="info_block">
-        <h3>~ Delivery info ~</h3>
-        <div class="info_block_content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, excepturi. Beatae corporis quia velit aliquam? Minus obcaecati dolores eum tempora error velit id veniam in, accusantium corporis cum modi numquam.</p>
-            <img src="../assets/images/delivery.png" alt="delivery img">
-        </div>
+  <div class="info_block">
+    <h3>~ Delivery Info ~</h3>
+    <div class="info_block_content">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis officia rerum explicabo quia natus non temporibus debitis quod aliquid necessitatibus sit laudantium doloremque ipsum dolor, quibusdam quas ullam delectus at.</p>
+      <img src="../assets/images/delivery.png" alt />
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'delivery'
-}
+  name: "delivery"
+};
 </script>
+
+<style scoped>
+</style>
+
